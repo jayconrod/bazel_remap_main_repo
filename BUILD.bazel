@@ -1,0 +1,8 @@
+load("@io_bazel_rules_x//:def.bzl", "x_library")
+
+toolchain_type(
+    name = "x_toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+x_library(name = "x_library")

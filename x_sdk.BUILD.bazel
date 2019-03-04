@@ -1,0 +1,13 @@
+load("@io_bazel_rules_x//:def.bzl", "x_toolchain")
+
+x_toolchain(
+    name = "x_toolchain_impl",
+    visibility = ["//visibility:public"],
+)
+
+toolchain(
+    name = "x_toolchain",
+    toolchain = "x_toolchain_impl",
+    toolchain_type = "@io_bazel_rules_x//:x_toolchain_type",
+    visibility = ["//visibility:public"],
+)
